@@ -147,7 +147,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Desktop\01_hello_SDL\01_hello_SDL\01_hello_SDL.cpp" />
+    <ClCompile Include="..\..\..\Desktop\01_hello_SDL\01_hello_SDL\asasa.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
