@@ -10,13 +10,20 @@ and may not be redistributed without written permission.*/
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
+Game* game = nullptr;
+
 int main(int argc, char* args[])
 {
-	//The window we'll be rendering to
-	SDL_Window* window = NULL;
+	game = new Game();
 
-	//The surface contained by the window
-	SDL_Surface* screenSurface = NULL;
+	game->init("Game Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, false);
+	while (game->running()) {
+		game->handleEvents();
+		game->update();
+		game->render();
+	}
+
+	game->clean();
 
 	return 0;
 }
